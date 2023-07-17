@@ -1,33 +1,27 @@
 #include <stdio.h>
 
 /**
- *main - print all combinations of three different digits
+ *main - prints hexadecimal base 0123456789abcdef, using putchar
  *Return: Always 0 (Success)
  */
 
 int main(void)
 {
-	int one;
-	int ten;
-	int hundred;
+	int n = '0';
+	int a_to_f = 'a';
 
-	for (hundred = '0'; hundred <= '9'; hundred++) /*hundreds place*/
+	while (n <= '9') /*print 0-9*/
 	{
-		for (ten = (hundred + 1); ten <= '9'; ten++) /*tens=100s+1*/
-		{
-			for (one = (ten + 1); one <= '9'; one++) /*ones*/
-			{
-				putchar(hundred);
-				putchar(ten);
-				putchar(one);
-				if (hundred != '7' || ten != '8' || one != '9')
-				{
-					putchar(',');
-					putchar(' ');
-				}
-			}
-		}
+		putchar(n);
+		n++;
 	}
+
+	while (a_to_f <= 'f') /*print a-f to finish hexbase*/
+	{
+		putchar(a_to_f);
+		a_to_f++;
+	}
+
 	putchar('\n');
 
 	return (0);
