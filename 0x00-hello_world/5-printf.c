@@ -1,11 +1,11 @@
 #include <stdio.h>
 /**
  * main - the main function
- * puts - function to print
+ * printf - function to print
  * Return: Description of the returned value
  */
 int main(void)
 {
-puts("\"Programming is like building a multilingual puzzle");
+printf("with proper grammar, but the outcome is a piece of art,\n");
 return (0);
 }
